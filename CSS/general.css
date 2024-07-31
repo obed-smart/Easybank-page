@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap);
+
+*,
+::after,
+::before {
+    box-sizing: border-box
+}
+
+* {
+    margin: 0
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Public Sans", sans-serif
+}
+
+canvas,
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    overflow-wrap: break-word
+}
+
+#__next,
+#root {
+    isolation: isolate
+}
+
+/*****
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*****/
+
+
+
+
+
+/**************************/
+/* UTILITY CLASSES */
+/**************************/
+
+.container {
+    width: calc(1200 * var(--rem));
+    margin-inline: auto;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-col-2 {
+    grid-template-columns:  repeat(2, 1fr);
+    gap: calc(128 * var(--rem));
+}
+
+.grid-col-4 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: calc(2 * var(--rem));
+}
+.grid-col-5 {
+    grid-template-columns: repeat(5, 1fr);
+    gap: calc(20 * var(--rem));
+}
+
+.heading-secondary{
+    font-size: calc(44 * var(--rem));
+    color: var(--Dark-Blue);
+    font-weight: 400;
+}
+
+

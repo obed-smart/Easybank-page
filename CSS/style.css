@@ -1,0 +1,147 @@
+/*****
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*****/
+
+:root {
+    --rem: calc(1rem / 16);
+
+    /**** Colors ****/
+
+    /* Primary */
+
+    --Dark-Blue: hsl(233, 26%, 24%);
+    --Lime-Green: hsl(136, 65%, 51%);
+    --Bright-Cyan: hsl(192, 70%, 51%);
+
+    /* Neutral */
+
+    --Grayish-Blue: hsl(233, 8%, 62%);
+    --Light-Grayish-Blue: hsl(220, 16%, 96%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+
+/**************************/
+/* SECTION HERO*/
+/**************************/
+
+.section-hero {
+    padding: calc(158 * var(--rem)) 0;
+    background-color: var(--Very-Light-Gray);
+}
+
+.hero {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    
+}
+
+.hero__textbox {
+    padding-right: calc(40 * var(--rem)); 
+}
+
+.hero__heading {
+    font-size: calc(62 * var(--rem));
+    line-height: 1.2;
+    color: var(--Dark-Blue);
+    font-weight: 400;
+
+}
+
+.hero__description {
+    font-size: calc(20 * var(--rem));
+    color: var(--Grayish-Blue);
+    margin-top: calc(32 * var(--rem)) ;
+    margin-bottom: calc(48 * var(--rem)) ;
+}
+
+.hero__cta:link,
+.hero__cta:visited {
+    padding: calc(16 * var(--rem)) calc(32 * var(--rem));
+    background-image:linear-gradient(to right, var(--Lime-Green), var(--Bright-Cyan)) ;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: calc(18 * var(--rem));
+    color: var(--White);
+    font-weight: 500;
+
+}
+
+.hero__imagebox{
+    /* position: absolute; */
+right: 0;
+
+}
+
+.hero__imagebox .img-app{
+position: absolute;
+
+width: 47rem;
+transform: translate(2% , -13%);
+
+top: 0;
+z-index: 1;
+}
+.hero__imagebox .img-background{
+position: absolute;
+top: 0;
+right: 0;
+width: 66rem;
+height: 55rem;
+transform: translate(30% , -22%);
+
+}
+
+/**************************/
+/* SECTION ABOUT*/
+/**************************/
+
+.section-about{
+  
+    padding: calc(90 * var(--rem)) 0;
+background-color: var(--Light-Grayish-Blue);
+
+}
+
+.about__header{
+    width: 48rem;
+}
+
+.about__description{
+    font-size: calc(20 * var(--rem));
+    color: var(--Grayish-Blue);
+    margin-top: calc(32 * var(--rem)) ;
+    margin-bottom: calc(48 * var(--rem)) ;
+}
+
+
+/**************************/
+/* SECTION ARTICLE*/
+/**************************/
+
+.section-article{
+    padding: calc(90 * var(--rem)) 0;
+    background-color: var(--Very-Light-Gray);
+
+}
+
+
+/**************************/
+/* FOOTER */
+/**************************/
+
+.footer{
+    padding: calc(64 * var(--rem)) 0;
+    background-color: var(--Dark-Blue);
+}
