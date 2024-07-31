@@ -82,17 +82,28 @@ p {
 
 .grid-col-4 {
     grid-template-columns: repeat(4, 1fr);
-    gap: calc(2 * var(--rem));
+    gap: calc(16 * var(--rem));
 }
 .grid-col-5 {
     grid-template-columns: repeat(5, 1fr);
     gap: calc(20 * var(--rem));
 }
 
-.heading-secondary{
-    font-size: calc(44 * var(--rem));
+.heading-secondary,
+.heading-tetiary{
     color: var(--Dark-Blue);
     font-weight: 400;
+}
+.heading-secondary{
+    font-size: calc(44 * var(--rem));
+}
+.heading-tetiary{
+    font-size: calc(24 * var(--rem));
+    margin: calc(24 * var(--rem)) 0;
+}
+
+.margin-md{
+    margin-bottom: calc(44 * var(--rem)) ;
 }
 
 
