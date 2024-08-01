@@ -14,14 +14,25 @@
   <link rel="stylesheet" href="./CSS/general.css">
   <link rel="stylesheet" href="./CSS/query.css">
 </head>
-<body>
-  <!-- Home
-  About
-  Contact
-  Blog
-  Careers
 
-  Request Invite -->
+<body>
+
+  <header class="header">
+    
+    <svg class="logo">
+      <use xlink:href="./images/logo.svg#logo"></use>
+    </svg>
+    <nav>
+      <ul class="nav-main">
+        <li><a class="nav__link" href=""></a>Home</li>
+        <li><a class="nav__link" href=""></a>About</li>
+        <li><a class="nav__link" href=""></a>Contact</li>
+        <li><a class="nav__link" href=""></a>Blog</li>
+        <li><a class="nav__link" href=""></a>Careers</li>
+      </ul>
+      <a class="cta-btn" href="">Request Invite</a>
+    </nav>
+  </header>
 
   <section class="section-hero">
     <div class="hero container grid grid-col-2">
@@ -30,7 +41,7 @@
         <p class="hero__description">Take your financial life online. Your Easybank account will be a one-stop-shop
           for spending, saving, budgeting, investing, and much more.</p>
 
-        <a class="hero__cta" href="">Request Invite</a>
+        <a class="cta-btn" href="">Request Invite</a>
       </div>
       <div class="hero__imagebox">
         <picture>
@@ -46,12 +57,12 @@
   <section class="section-about">
     <div class="about container">
       <div class="about__header">
-      <h2 class="heading-secondary">Why choose Easybank?</h2>
-      <p class="about__description">
-        We leverage Open Banking to turn your bank account into your financial hub. Control
-        your finances like never before.
-      </p>
-    </div>
+        <h2 class="heading-secondary">Why choose Easybank?</h2>
+        <p class="about__description">
+          We leverage Open Banking to turn your bank account into your financial hub. Control
+          your finances like never before.
+        </p>
+      </div>
       <div class="grid grid-col-4">
         <div>
           <img class="about__icon" src="./images/icon-online.svg" alt="a hand holding an ATM card">
@@ -75,7 +86,8 @@
         </div>
 
         <div>
-          <img class="about__icon" src="./images/icon-api.svg" alt="our application programming interface for integration">
+          <img class="about__icon" src="./images/icon-api.svg"
+            alt="our application programming interface for integration">
           <h3 class="heading-tetiary"> Open API</h3>
           <p class="about__text">Manage your savings, investments, pension, and much more from one account. Tracking
             your money has never been easier.
@@ -89,41 +101,51 @@
   <section class="section-article">
     <div class=" article container">
       <h2 class="heading-secondary margin-md">Latest Articles</h2>
-      <div class="grid grid-col-4">
+      <div class="grid grid-col-4 gap">
 
         <article>
           <img src="./images/image-currency.jpg" alt="image of money">
-        <p>By Claire Robinson</p>
-        <h3>Receive money in any currency with no fees</h3>
-        <p> The world is getting smaller and we’re becoming more mobile. So why should you be
-          forced to only receive money in a single …</p>
-      </article>
+          <div class="article__textbox">
+            <p class="article__author-name">By Claire Robinson</p>
+            <h3 class="article__heading">Receive money in any currency with no fees</h3>
+            <p class="article__text"> The world is getting smaller and we’re becoming more mobile. So why should you be
+              forced to only receive money in a single …</p>
+          </div>
+        </article>
 
-      <article>
-        <img src="./images/image-restaurant.jpg" alt="eating in a restaurant">
-        <p>By Wilson Hutton</p>
-        <h3>Treat yourself without worrying about money</h3>
-        <p>Our simple budgeting feature allows you to separate out your spending and set
-          realistic limits each month. That means you …</p>
-        </article>
-        
         <article>
-        <img src="./images/image-plane.jpg" alt="an image of a flying plan">
-        <p> By Wilson Hutton</p>
-        <h3> Take your Easybank card wherever you go</h3>
-        <p>We want you to enjoy your travels. This is why we don’t charge any fees on purchases
-          while you’re abroad. We’ll even show you …</p>
+          <img src="./images/image-restaurant.jpg" alt="eating in a restaurant">
+          <div class="article__textbox">
+            <p class="article__author-name">By Wilson Hutton</p>
+            <h3 class="article__heading">Treat yourself without worrying about money</h3>
+            <p class="article__text">Our simple budgeting feature allows you to separate out your spending and set
+              realistic limits each month. That means you …</p>
+          </div>
         </article>
-        
+
         <article>
-        <img src="./images/image-confetti.jpg" alt="">
-        <p>By Claire Robinson</p>
-        <h3>Our invite-only Beta accounts are now live!</h3>
-        <p>After a lot of hard work by the whole team, we’re excited to launch our closed beta.
-          It’s easy to request an invite through the site ...</p>
-      </article>
-      
-    </div>
+          <img src="./images/image-plane.jpg" alt="an image of a flying plan">
+          <div class="article__textbox">
+            <p class="article__author-name"> By Wilson Hutton</p>
+            <h3 class="article__heading"> Take your Easybank card wherever you go</h3>
+            <p class="article__text">We want you to enjoy your travels. This is why we don’t charge any fees on
+              purchases
+              while you’re abroad. We’ll even show you …</p>
+          </div>
+        </article>
+
+        <article>
+          <img src="./images/image-confetti.jpg" alt="">
+          <div class="article__textbox">
+            <p class="article__author-name">By Claire Robinson</p>
+            <h3 class="article__heading">Our invite-only Beta accounts are now live!</h3>
+            <p class="article__text">After a lot of hard work by the whole team, we’re excited to launch our closed
+              beta.
+              It’s easy to request an invite through the site ...</p>
+          </div>
+        </article>
+
+      </div>
     </div>
   </section>
 
@@ -131,36 +153,50 @@
     <div class="container">
       <div class="grid grid-col-5">
         <div class="footer__logos">
-          <a href="#">
-            <img src="./images/logo.svg" alt="">
+          <a href="#" class="footer__logo">
+
+            <svg class="logo">
+              <use xlink:href="./images/logo.svg#logo"></use>
+            </svg>
           </a>
+
           <ul class="footer__social-logos">
             <li>
               <a href="">
-                <img class="footer__icon" src="./images/icon-facebook.svg" alt="facebook icon">
+                <svg class="icon">
+                  <use xlink:href="./images/icon-facebook.svg#icon"></use>
+                </svg>
               </a>
             </li>
 
             <li>
               <a href="">
-                <img class="footer__icon" src="./images/icon-youtube.svg" alt="youtube icon">
+                <svg class="icon">
+                  <use xlink:href="./images/icon-youtube.svg#icon"></use>
+                </svg>
               </a>
             </li>
 
             <li>
               <a href="">
-                <img class="footer__icon" src="./images/icon-twitter.svg" alt="twitter icon">
+                <svg class="icon">
+                  <use xlink:href="./images/icon-twitter.svg#icon"></use>
+                </svg>
               </a>
             </li>
 
             <li>
               <a href="">
-                <img class="footer__icon" src="./images/icon-pinterest.svg" alt=" pinterest icon">
+                <svg class="icon">
+                  <use xlink:href="./images/icon-pinterest.svg#icon"></use>
+                </svg>
               </a>
             </li>
             <li>
               <a href="">
-                <img class="footer__icon" src="./images/icon-instagram.svg" alt="instagram icon">
+                <svg class="icon">
+                  <use xlink:href="./images/icon-instagram.svg#icon"></use>
+                </svg>
               </a>
             </li>
           </ul>
@@ -169,15 +205,15 @@
         <nav>
           <ul class="footer__nav">
             <li>
-              <a href="">About Us</a>
+              <a class="footer-link" href="">About Us</a>
             </li>
 
             <li>
-              <a href=""> Contact</a>
+              <a class="footer-link" href=""> Contact</a>
             </li>
 
             <li>
-              <a href="">Blog</a>
+              <a class="footer-link" href="">Blog</a>
             </li>
           </ul>
         </nav>
@@ -185,21 +221,21 @@
         <nav>
           <ul class="footer__nav">
             <li>
-              <a href="">Careers</a>
+              <a class="footer-link" href="">Careers</a>
             </li>
 
             <li>
-              <a href=""> Support</a>
+              <a class="footer-link" href=""> Support</a>
             </li>
 
             <li>
-              <a href="">Privacy Policy</a>
+              <a class="footer-link" href="">Privacy Policy</a>
             </li>
           </ul>
         </nav>
         <div class="footer__proof">
-          <a href="">Request Invite</a>
-          <p>&copy; Easybank. All Rights Reserved</p>
+          <a href="#" class="cta-btn">Request Invite</a>
+          <p class="footer__company-right">&copy; Easybank. All Rights Reserved</p>
         </div>
       </div>
     </div>

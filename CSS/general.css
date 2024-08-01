@@ -47,6 +47,12 @@ p {
     isolation: isolate
 }
 
+ul,
+ol,
+li {
+    list-style-type: none;
+}
+
 /*****
 --- 01 TYPOGRAPHY SYSTEM
 
@@ -76,7 +82,7 @@ p {
 }
 
 .grid-col-2 {
-    grid-template-columns:  repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: calc(128 * var(--rem));
 }
 
@@ -84,26 +90,53 @@ p {
     grid-template-columns: repeat(4, 1fr);
     gap: calc(16 * var(--rem));
 }
+
 .grid-col-5 {
     grid-template-columns: repeat(5, 1fr);
     gap: calc(20 * var(--rem));
 }
 
+.gap {
+    gap: calc(24 * var(--rem));
+
+}
+
+.logo{
+    width: 139px;
+    height: 20px;
+}
+
+.cta-btn:link,
+.cta-btn:visited {
+    padding: calc(12 * var(--rem)) calc(32 * var(--rem));
+    background-image: linear-gradient(to right, var(--Lime-Green), var(--Bright-Cyan));
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: calc(18 * var(--rem));
+    color: var(--White);
+    font-weight: 500;
+    transition: all 0.3s;
+}
+.cta-btn:hover,
+.cta-btn:active{
+    opacity: 0.8;
+}
+
 .heading-secondary,
-.heading-tetiary{
+.heading-tetiary {
     color: var(--Dark-Blue);
     font-weight: 400;
 }
-.heading-secondary{
+
+.heading-secondary {
     font-size: calc(44 * var(--rem));
 }
-.heading-tetiary{
+
+.heading-tetiary {
     font-size: calc(24 * var(--rem));
     margin: calc(24 * var(--rem)) 0;
 }
 
-.margin-md{
-    margin-bottom: calc(44 * var(--rem)) ;
+.margin-md {
+    margin-bottom: calc(44 * var(--rem));
 }
-
-

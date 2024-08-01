@@ -34,15 +34,22 @@
 /* SECTION HERO*/
 /**************************/
 
+.header{
+    
+}
+
 .section-hero {
     padding: calc(158 * var(--rem)) 0;
     background-color: var(--Very-Light-Gray);
+    position: relative;
+    overflow-: hidden;
 }
 
 .hero {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+   
 
 
 }
@@ -66,22 +73,6 @@
     margin-bottom: calc(48 * var(--rem));
 }
 
-.hero__cta:link,
-.hero__cta:visited {
-    padding: calc(16 * var(--rem)) calc(32 * var(--rem));
-    background-image: linear-gradient(to right, var(--Lime-Green), var(--Bright-Cyan));
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: calc(18 * var(--rem));
-    color: var(--White);
-    font-weight: 500;
-}
-
-/* .hero__imagebox {
-    position: absolute;
-    right: 0;
-} */
-
 .hero__imagebox .img-app {
     position: absolute;
 
@@ -89,7 +80,7 @@
     transform: translate(2%, -13%);
 
     top: 0;
-    z-index: 1;
+    z-index: 999;
 }
 
 .hero__imagebox .img-background {
@@ -98,7 +89,7 @@
     right: 0;
     width: 66rem;
     height: 55rem;
-    transform: translate(30%, -22%);
+    transform: translate(30%, -24%);
 
 }
 
@@ -107,10 +98,8 @@
 /**************************/
 
 .section-about {
-
     padding: calc(96 * var(--rem)) 0;
     background-color: var(--Light-Grayish-Blue);
-
 }
 
 .about__header {
@@ -124,12 +113,12 @@
     margin-bottom: calc(80 * var(--rem));
 }
 
-.about__icon{
+.about__icon {
     width: calc(74 * var(--rem));
     height: calc(74 * var(--rem));
 }
 
-.about__text{
+.about__text {
     font-size: calc(18 * var(--rem));
     color: var(--Grayish-Blue);
 }
@@ -143,10 +132,55 @@
     background-color: var(--Very-Light-Gray);
 }
 
-.article__heading{
+.section-article article {
+    background-color: var(--White);
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-row: span 4;
+}
+
+.section-article article img {
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+}
+
+.article__textbox {
+    padding: 1.5rem;
 
 }
 
+.article__author-name {
+    font-size: calc(12 * var(--rem));
+    color: var(--Grayish-Blue);
+    font-weight: 500;
+    margin-bottom: calc(12 * var(--rem));
+
+}
+
+.article__heading {
+    color: var(--Dark-Blue);
+    font-weight: 500;
+    font-size: calc(18 * var(--rem));
+    margin-bottom: calc(12 * var(--rem));
+    cursor: pointer;
+
+}
+
+.article__heading:hover {
+    background-image: linear-gradient(to right, var(--Lime-Green), var(--Bright-Cyan));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.article__text {
+    font-size: calc(14 * var(--rem));
+    color: var(--Grayish-Blue);
+}
 
 /**************************/
 /* FOOTER */
@@ -155,4 +189,70 @@
 .footer {
     padding: calc(64 * var(--rem)) 0;
     background-color: var(--Dark-Blue);
+}
+
+.footer__logos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer__logo .logo {
+    color: var(--White);
+    width: 139px;
+    height: 20px;
+}
+
+.footer__social-logos {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 1.2rem;
+}
+
+.footer__social-logos .icon {
+    width: 21px;
+    height: 20px;
+    color: var(--White);
+}
+
+.footer__social-logos .icon:hover {
+    color: var(--Bright-Cyan);
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+    text-decoration: none;
+    color: var(--Light-Grayish-Blue);
+    font-size: calc(14 * var(--rem));
+    font-weight: 600;
+}
+
+.footer-link:hover,
+.footer-link:active {
+    background-image: linear-gradient(var(--Lime-Green), var(--Bright-Cyan));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer__proof {
+    grid-column: 4/-1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.footer__company-right {
+    font-size: calc(16 * var(--rem));
+    color: var(--Grayish-Blue);
+    font-weight: 500;
+    justify-self: end;
 }
