@@ -10,10 +10,14 @@
     margin: 0
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    font-family: "Public Sans", sans-serif
+    font-family: "Public Sans", sans-serif;
 }
 
 canvas,
@@ -139,4 +143,11 @@ li {
 
 .margin-md {
     margin-bottom: calc(44 * var(--rem));
+}
+
+*:focus{
+    outline: none;
+
+    box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+    transition: all 0.3s;
 }

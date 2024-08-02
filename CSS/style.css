@@ -31,25 +31,75 @@
 
 
 /**************************/
-/* SECTION HERO*/
+/* HEADER */
 /**************************/
 
-.header{
-    
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: calc(14 * var(--rem)) 0;
+
 }
+
+.header-nav .logo {
+    color: var(--Dark-Blue);
+}
+
+.nav-main {
+    display: flex;
+    align-items: center;
+    gap: calc(24 * var(--rem));
+}
+
+.nav__link:link,
+.nav__link:visited {
+    font-size: calc(18 * var(--rem));
+    text-decoration: none;
+    color: var(--Grayish-Blue);
+    position: relative;
+}
+
+
+.nav__link::before {
+    content: '';
+    width: 0%;
+    height: 5px;
+    background-image: linear-gradient(to right, var(--Lime-Green), var(--Bright-Cyan));
+    margin: auto;
+    transition: all 0.3s;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    bottom: calc(-29 * var(--rem));
+}
+
+.nav__link:hover,
+.nav__link:hover::before {
+    width: 100%;
+    color: var(--Dark-Blue);
+}
+
+
+
+/**************************/
+/* SECTION HERO*/
+/**************************/
 
 .section-hero {
     padding: calc(158 * var(--rem)) 0;
     background-color: var(--Very-Light-Gray);
     position: relative;
-    overflow-: hidden;
+    /* overflow: hidden; */
+    overflow-block: hidden;
 }
 
 .hero {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-   
+
 
 
 }
@@ -217,7 +267,8 @@
     color: var(--White);
 }
 
-.footer__social-logos .icon:hover {
+.footer__social-logos .icon:hover,
+.footer__social-logos .icon:active {
     color: var(--Bright-Cyan);
 }
 
@@ -255,4 +306,14 @@
     color: var(--Grayish-Blue);
     font-weight: 500;
     justify-self: end;
+}
+
+
+
+footer *:focus {
+    outline: none;
+
+    box-shadow: 0 0 0 0.2rem var(--Bright-Cyan);
+    transition: all 0.3s;
+    border-radius: 2px;
 }
