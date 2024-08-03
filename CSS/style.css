@@ -127,6 +127,8 @@
     padding: calc(160 * var(--rem)) 0;
     background-color: var(--Very-Light-Gray);
     position: relative;
+
+   
 }
 
 .hero {
@@ -181,7 +183,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 4;
 
     & .app {
         position: absolute;
@@ -198,7 +200,10 @@
 .section-about {
     padding: calc(96 * var(--rem)) 0;
     background-color: var(--Light-Grayish-Blue);
+    position: relative;
+    z-index: 3;
 
+   
 }
 
 .about__header {
