@@ -12,12 +12,15 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
+
 }
 
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     font-family: "Public Sans", sans-serif;
+    overflow-x: hidden;
 }
 
 canvas,
@@ -77,8 +80,9 @@ li {
 /**************************/
 
 .container {
-    width: calc(1200 * var(--rem));
+    max-width: calc(1300 * var(--rem));
     margin-inline: auto;
+    padding: 0 calc(32 * var(--rem));
 }
 
 .grid {

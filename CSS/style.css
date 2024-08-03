@@ -5,7 +5,7 @@
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
 - Spacing system (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 / 160
 
 *****/
 
@@ -33,15 +33,51 @@
 /**************************/
 /* HEADER */
 /**************************/
+.header {
+    background-color: var(--White);
+    height: calc(96 * var(--rem));
 
-.header-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
-    padding: calc(14 * var(--rem)) 0;
+    z-index: 10;
 
+    & .header-nav {
+        background-color: var(--White);
+        width: 100%;
+        height: 100%;
+
+        /* padding: 0; */
+        z-index: 10;
+        display: flex;
+        align-items: center;
+
+        & div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
+
+/* sticky header */
+
+.sticky .header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: calc(80 * var(--rem));
+    padding: 0 auto;
+    background-color: var(--White);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.sticky .section-hero{
+    margin-top:calc(96 * var(--rem)) ;
+}
+
 
 .header-nav .logo {
     color: var(--Dark-Blue);
@@ -50,12 +86,12 @@
 .nav-main {
     display: flex;
     align-items: center;
-    gap: calc(24 * var(--rem));
+    gap: calc(32 * var(--rem));
 }
 
 .nav__link:link,
 .nav__link:visited {
-    font-size: calc(18 * var(--rem));
+    font-size: calc(20 * var(--rem));
     text-decoration: none;
     color: var(--Grayish-Blue);
     position: relative;
@@ -88,11 +124,9 @@
 /**************************/
 
 .section-hero {
-    padding: calc(158 * var(--rem)) 0;
+    padding: calc(160 * var(--rem)) 0;
     background-color: var(--Very-Light-Gray);
     position: relative;
-    /* overflow: hidden; */
-    overflow-block: hidden;
 }
 
 .hero {
@@ -100,13 +134,11 @@
     justify-content: flex-start;
     align-items: center;
 
-
-
+    & .hero__textbox {
+        padding-right: calc(40 * var(--rem));
+    }
 }
 
-.hero__textbox {
-    padding-right: calc(40 * var(--rem));
-}
 
 .hero__heading {
     font-size: calc(62 * var(--rem));
@@ -123,24 +155,40 @@
     margin-bottom: calc(48 * var(--rem));
 }
 
-.hero__imagebox .img-app {
-    position: absolute;
-
-    width: 47rem;
-    transform: translate(2%, -13%);
-
-    top: 0;
-    z-index: 999;
-}
-
-.hero__imagebox .img-background {
+.hero__imagebox {
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     right: 0;
-    width: 66rem;
-    height: 55rem;
-    transform: translate(30%, -24%);
 
+    z-index: 1;
+
+
+    & .img-background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(36%, -25%);
+    }
+}
+
+
+
+.hero__img-app {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    & .app {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(22%, -13%);
+    }
 }
 
 /**************************/
@@ -150,10 +198,11 @@
 .section-about {
     padding: calc(96 * var(--rem)) 0;
     background-color: var(--Light-Grayish-Blue);
+
 }
 
 .about__header {
-    width: 48rem;
+    max-width: 48rem;
 }
 
 .about__description {
@@ -188,9 +237,6 @@
     overflow: hidden;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
 
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-row: span 4;
 }
 
 .section-article article img {
@@ -200,7 +246,7 @@
 }
 
 .article__textbox {
-    padding: 1.5rem;
+    padding: 1.3rem;
 
 }
 
@@ -215,7 +261,7 @@
 .article__heading {
     color: var(--Dark-Blue);
     font-weight: 500;
-    font-size: calc(18 * var(--rem));
+    font-size: calc(20 * var(--rem));
     margin-bottom: calc(12 * var(--rem));
     cursor: pointer;
 
@@ -228,7 +274,7 @@
 }
 
 .article__text {
-    font-size: calc(14 * var(--rem));
+    font-size: calc(18 * var(--rem));
     color: var(--Grayish-Blue);
 }
 
