@@ -12,8 +12,7 @@ const check = new IntersectionObserver(
     },
     {
         root: null,
-        threshold: 0,
-        rootMargin: "-80px"
+        threshold: 0.1,
     })
 
 check.observe(sectionEl)
