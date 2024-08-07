@@ -82,8 +82,6 @@
 
 .header-nav .logo {
     color: var(--Dark-Blue);
-    transform: scale(1.2);
-
 }
 
 .nav__list {
@@ -158,11 +156,7 @@ body::after {
     will-change: opacity, visibility;
     overflow: hidden;
 }
-body.overlay::after {
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
-}
+
 
 /* Add no scroll to the body when the nav is on */
 
