@@ -5,8 +5,6 @@ const header = document.querySelector(".header")
 
 // Add click event to the menu button
 
-
-
 navButton.addEventListener("click", () => {
     document.body.classList.toggle("open-nav");
     document.body.classList.toggle("overlay")

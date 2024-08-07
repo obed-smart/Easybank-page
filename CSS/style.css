@@ -139,6 +139,8 @@
     display: none;
 }
 
+/* An overlay to the body when the menubar is active */
+
 body::after {
     content: "";
     position: fixed;
@@ -162,14 +164,11 @@ body.overlay::after {
     visibility: visible;
 }
 
+/* Add no scroll to the body when the nav is on */
+
 html:has(body.overlay) {
     overflow: hidden !important;
 }
-
-
-
-
-
 
 
 /**************************/
@@ -180,8 +179,6 @@ html:has(body.overlay) {
     padding: calc(160 * var(--rem)) 0;
     background-color: var(--Very-Light-Gray);
     position: relative;
-
-
 }
 
 .hero {
@@ -191,13 +188,11 @@ html:has(body.overlay) {
     z-index: 1;
 }
 
-
 .hero__heading {
     font-size: calc(62 * var(--rem));
     line-height: 1.2;
     color: var(--Dark-Blue);
     font-weight: 400;
-
 }
 
 .hero__description {
@@ -208,7 +203,6 @@ html:has(body.overlay) {
 }
 
 .hero__imagebox {
-
 
     & .img-background {
         position: absolute;
@@ -227,10 +221,6 @@ html:has(body.overlay) {
 
 }
 
-
-
-
-
 /**************************/
 /* SECTION ABOUT*/
 /**************************/
@@ -240,8 +230,6 @@ html:has(body.overlay) {
     background-color: var(--Light-Grayish-Blue);
     position: relative;
     z-index: 2;
-
-
 }
 
 .about__header {
@@ -273,7 +261,6 @@ html:has(body.overlay) {
     padding: calc(96 * var(--rem)) 0;
     background-color: var(--Very-Light-Gray);
 }
-
 .section-article article {
     background-color: var(--White);
     border-radius: 9px;
@@ -289,16 +276,13 @@ html:has(body.overlay) {
 
 .article__textbox {
     padding: 1.3rem;
-
 }
-
 
 .article__author-name {
     font-size: calc(12 * var(--rem));
     color: var(--Grayish-Blue);
     font-weight: 500;
     margin-bottom: calc(12 * var(--rem));
-
 }
 
 .article__heading {
@@ -307,7 +291,6 @@ html:has(body.overlay) {
     font-size: calc(20 * var(--rem));
     margin-bottom: calc(12 * var(--rem));
     cursor: pointer;
-
 }
 
 .article__heading:hover {
@@ -332,7 +315,6 @@ html:has(body.overlay) {
 
 .footer__logos {
     display: flex;
-
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
@@ -386,7 +368,6 @@ html:has(body.overlay) {
 .footer__proof {
     grid-column: 4/-1;
     justify-self: end;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -394,9 +375,7 @@ html:has(body.overlay) {
     & a {
         text-align: center;
         padding: calc(12 * var(--rem)) calc(18 * var(--rem));
-
     }
-
 }
 
 .footer__company-right {
@@ -405,8 +384,6 @@ html:has(body.overlay) {
     font-weight: 500;
     justify-self: end;
 }
-
-
 
 footer *:focus {
     outline: none;
