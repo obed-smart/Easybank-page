@@ -88,44 +88,77 @@
 
 @media (max-width:59em) {
 
-  .nav-main {
-    /* position: absolute;
-   top: 4%;
-    left: auto;
-    right: auto;
-   background-color: aqua;
-    width: 90%;
-    height: 30vh;
 
-  z-index: 9999; */
-
+  .cta-hide {
     display: none;
+  }
+
+  .nav-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--White);
+    width: 90%;
+    height: auto;
+    transform: translate(100%, 25%);
+    transition: all 0.3s ease-in;
+    z-index: 1000;
+    border-radius: 9px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+will-change: opacity,visibility;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+
+    & .nav__link:link,
+    .nav__link:visited {
+      color: var(--Dark-Blue);
+      font-weight: 500;
+    }
   }
 
   .nav__list {
 
     flex-direction: column;
     gap: calc(16 * var(--rem));
-    border: 2px solid;
+    padding: calc(24 * var(--rem));
 
   }
 
-  .cta-hide {
+  .open-nav .nav-main {
+    transform: translate(-50%, 25%);
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+
+
+
+  .menu-btn-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .open-nav .menu-btn[name="menu"] {
     display: none;
   }
 
+  .open-nav .menu-btn[name="close"] {
+    display: block;
+  }
+
+ 
   .grid-col-2 {
     grid-template-columns: 1fr;
     row-gap: calc(560 * var(--rem));
   }
 
-
-
   .hero__textbox {
     margin-top: calc(600 * var(--rem));
     text-align: center;
-    margin-inline:auto ;
-   max-width: 35rem;
+    margin-inline: auto;
+    max-width: 35rem;
   }
 
   .hero__imagebox {
@@ -157,7 +190,13 @@
   .grid-col-5 {
     grid-template-columns: repeat(3, 1fr);
     column-gap: calc(20 * var(--rem));
-    row-gap: calc(32 * var(--rem));
+    row-gap: calc(48 * var(--rem));
+
+    & .footer__proof {
+      grid-column: 1/-1;
+      justify-self: center;
+      gap: calc(16 * var(--rem));
+    }
   }
 
   .grid-col-4 {
@@ -165,20 +204,17 @@
     gap: calc(16 * var(--rem));
   }
 
-  .footer__proof {
-    grid-column: 1/-1;
-    justify-self: center;
-    gap: calc(16 * var(--rem));
-  }
+
 }
 
-@media (max-width:50em){
+@media (max-width:50em) {
 
   .hero__imagebox {
     & .app {
       max-width: 100%;
     }
   }
+
   .grid-col-4 {
     grid-template-columns: repeat(2, 1fr);
     gap: calc(28 * var(--rem));
@@ -186,9 +222,10 @@
 
 }
 
-@media (max-width:50em){
+@media (max-width:50em) {
+
   .hero__imagebox {
-   
+
     & .img-background {
       max-height: 100rem;
       transform: translate(0, -10%);
@@ -197,10 +234,112 @@
   }
 }
 
-@media (max-width:38em){
- 
+@media (max-width:38em) {
+
+  :is(.section-hero, .section-about, .section-article) {
+    padding: calc(80 * var(--rem)) 0;
+  }
+
   .hero__textbox {
     margin-top: calc(450 * var(--rem));
   }
 }
 
+@media (max-width:30em) {
+
+  .heading-secondary {
+    text-align: center;
+  }
+
+  .hero__textbox {
+    margin-top: calc(300 * var(--rem));
+
+    & .hero__heading {
+      font-size: calc(40 * var(--rem));
+    }
+
+    & .hero__description {
+      font-size: calc(18 * var(--rem));
+    }
+
+  }
+
+  .about__header {
+    text-align: center;
+
+    & p {
+      font-size: calc(16 * var(--rem));
+    }
+  }
+
+  .grid-col-4 {
+    grid-template-columns: 1fr;
+    gap: calc(28 * var(--rem));
+
+    &>:where(div) {
+
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+  }
+
+  .grid-col-5 {
+    grid-template-columns: 1fr;
+    row-gap: calc(12 * var(--rem));
+
+    &>* {
+      text-align: center;
+    }
+
+    .footer__logos {
+
+      align-items: center;
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+
+      & .logo {
+        transform: scale(1.6);
+      }
+
+      & .footer__social-logos {
+        gap: 2rem;
+
+        & .icon {
+          transform: scale(1.5);
+
+        }
+      }
+
+
+    }
+
+    & .footer-link:link,
+    .footer-link:visited {
+      text-decoration: none;
+      color: var(--Light-Grayish-Blue);
+      font-size: calc(18 * var(--rem));
+      font-weight: 600;
+    }
+
+    & .footer__nav {
+      padding: 0;
+    }
+  }
+
+
+  .footer__proof {
+    grid-column: 1;
+    margin-top: 2rem;
+    gap: calc(16 * var(--rem));
+  }
+}
+
+@media (max-width:23em) {
+  .hero__textbox {
+    margin-top: calc(220 * var(--rem));
+  }
+}
